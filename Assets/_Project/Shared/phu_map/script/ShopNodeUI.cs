@@ -1,64 +1,97 @@
-    using UnityEngine;
-    using UnityEngine.UI;
-    using TMPro;
-    using DG.Tweening;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using DG.Tweening;
+using LabDiner.Shared.UI;
 
-    namespace LabDiner.Shared
+namespace LabDiner.Shared
+{
+    public class ShopNodeUI : MonoBehaviour
     {
+        public ShopData shopData;
 
-        public class ShopNodeUI : MonoBehaviour
+        [Header("UI References")]
+        [SerializeField] private Image shopIconImage;
+        [SerializeField] private Image destination;
+        [SerializeField] private GameObject checkmark;
+        [SerializeField] private GameObject panel;
+        [SerializeField] private TextMeshProUGUI nameText;
+
+        private void Start()
         {
-            public ShopData shopData;
+            RefreshUI();
+        }
 
-            [Header("UI References")]
-            [SerializeField] private Image shopIconImage;
-            [SerializeField] private Image destination;
-            [SerializeField] private GameObject panel;
-            [SerializeField] private TextMeshProUGUI nameText;
-
-            // Chạy khi nhấn Play
-            private void Start()
+        public void RefreshUI()
+        {
+            if (shopData == null) 
             {
-                RefreshUI();
+                Debug.LogWarning($"[ShopNodeUI] {gameObject.name} thiếu ShopData!");
+                return;
             }
 
-            // Hàm này để MapManager gọi hoặc dùng để cập nhật thủ công
-            public void RefreshUI()
-            {
-                if (shopData == null)
-                {
-                    return;
-                }
+            if (shopIconImage != null) shopIconImage.sprite = shopData.icon;
+            if (nameText != null) nameText.text = shopData.shopName;
+            if (destination != null) destination.sprite = shopData.destination;
 
-                // Cập nhật thông tin từ ScriptableObject
-                if (shopIconImage != null) shopIconImage.sprite = shopData.icon;
-                if (nameText != null) nameText.text = shopData.shopName;
-                if (panel != null)
-                {
+            if (checkmark != null)
+                checkmark.SetActive(shopData.isCompleted);
+
+            if (shopIconImage != null) 
+                shopIconImage.color = shopData.isCompleted ? Color.white : Color.gray;
+
+            if (panel != null)
+            {
                 var panelImg = panel.GetComponent<Image>();
                 if (panelImg != null) panelImg.sprite = shopData.panel;
-
-                // Chỉ ẩn panel lúc khởi tạo, không để chung dòng với lệnh gán sprite
                 panel.gameObject.SetActive(false);
-                }
-            if (destination != null)      destination.sprite = shopData.destination;
-                if (shopIconImage != null) shopIconImage.color = shopData.isCompleted ? Color.white : Color.brown;
+            }
+        }
+
+        public void OnShopClick()
+        {
+            Debug.Log($"[ShopNodeUI] Đã click vào shop: {gameObject.name}");
+
+            if (panel == null) 
+            {
+                Debug.LogError($"[ShopNodeUI] {gameObject.name} chưa kéo Panel vào Inspector!");
+                return;
             }
 
-            public void OnShopClick()
-            {
-                if (panel == null) return;
+            if (shopData == null) return;
 
-                // Kiểm tra trạng thái hiện tại của Panel để Toggle (Đảo ngược trạng thái)
-                bool isActive = panel.gameObject.activeSelf;
-                panel.gameObject.SetActive(!isActive);
+            var popEffect = panel.GetComponent<PopScaleEffect>();
+            bool isActive = panel.activeSelf;
 
-            // Nếu là mở Panel thì mới cần cập nhật dữ liệu từ ShopData
-            if (!isActive)
+            if (isActive)
             {
+                Debug.Log("Đang đóng Panel...");
+                if (popEffect != null)
+                {
+                    popEffect.Hide(() => panel.SetActive(false));
+                }
+                else
+                {
+                    panel.SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.Log("Đang mở Panel...");
+                panel.SetActive(true);
+
                 var panelImg = panel.GetComponent<Image>();
                 if (panelImg != null) panelImg.sprite = shopData.panel;
+
+                if (popEffect != null)
+                {
+                    popEffect.Show();
+                }
+                else
+                {
+                    Debug.LogWarning($"[ShopNodeUI] Panel trên {gameObject.name} không có script PopScaleEffect!");
+                }
             }
         }
     }
-    }
+}

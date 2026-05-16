@@ -70,6 +70,7 @@ namespace LabDiner.Shared
                 shopNodes[i].shopData.isCompleted = shopNodes[i].shopData.level < currentPlayerLevel;
                 shopNodes[i].RefreshUI();
             }
+            paths[currentPlayerLevel - 1].DOMove()
         }
     }
 }

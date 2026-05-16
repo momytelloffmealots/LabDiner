@@ -26,7 +26,7 @@ namespace LabDiner.Shared
         {
             if (shopData == null) 
             {
-                Debug.LogWarning($"[ShopNodeUI] {gameObject.name} thiếu ShopData!");
+                Debug.Log($"[ShopNodeUI] {gameObject.name} thiếu ShopData!");
                 return;
             }
 

@@ -11,54 +11,47 @@ namespace LabDiner.Shared
         [Header("Animation Settings")]
         [SerializeField] private PopScaleEffect _mainPanelEffect; // Hiệu ứng cho toàn bộ Map Panel
         [SerializeField] private PopScaleEffect backbutton;
-        [SerializeField] private RectOffsetEffect pathEffect;
+        [SerializeField] private RectOffsetEffect globalPathEffect; // Hiệu ứng vẽ toàn bộ bản đồ
 
         [Header("Danh sách Shop trong Map này")]
         public List<ShopNodeUI> shopNodes;
 
         [Header("Đường nối (Paths)")]
-        public List<Image> paths;
-        public Image header_map;
+        [Tooltip("Kéo các đường nối có gắn RectOffsetEffect vào đây")]
+        public List<RectTransform> paths; 
 
         [Header("Player Progress")]
         [SerializeField] private int playerLevel = 1; // Cấp hiện tại của người chơi
 
-        // Hàm này gọi khi ấn nút Mở Map
         public void OpenMap()
         {
-            // 1. Hiện Panel chính
             if (_mainPanelEffect != null)
             {
                 _mainPanelEffect.gameObject.SetActive(true);
                 _mainPanelEffect.Show();
             }
 
-            // 2. Chạy hiệu ứng cho Header/Path (Nếu có)
-            if (pathEffect != null)
+            if (globalPathEffect != null)
             {
-                pathEffect.gameObject.SetActive(true);
-                pathEffect.StartEffect();
+                globalPathEffect.gameObject.SetActive(true);
+                globalPathEffect.StartEffect();
             }
 
-            // 3. Hiện nút Back
             if (backbutton != null)
             {
                 backbutton.gameObject.SetActive(true);
                 backbutton.Show();
             }
 
-            // 4. Cập nhật trạng thái các shop
             RefreshMap(playerLevel);
         }
 
-        // Hàm này gọi khi ấn nút Đóng Map
         public void CloseMap()
         {
             if (_mainPanelEffect != null)
             {
                 _mainPanelEffect.Hide(() => _mainPanelEffect.gameObject.SetActive(false));
             }
-            
             if (backbutton != null) backbutton.Hide();
         }
 
@@ -66,9 +59,42 @@ namespace LabDiner.Shared
         {
             for (int i = 0; i < shopNodes.Count; i++)
             {
-                if (shopNodes[i].shopData == null) continue;
-                shopNodes[i].shopData.isCompleted = shopNodes[i].shopData.level < currentPlayerLevel;
-                shopNodes[i].RefreshUI();
+                var node = shopNodes[i];
+                if (node.shopData == null) continue;
+
+                node.shopData.isCompleted = node.shopData.level < currentPlayerLevel;
+                node.RefreshUI();
+
+                // Logic xử lý đường nối (Paths)
+                if (i < paths.Count && paths[i] != null)
+                {
+                    var effect = paths[i].GetComponent<RectOffsetEffect>();
+                    int pathLevel = node.shopData.level;
+
+                    if (pathLevel < currentPlayerLevel)
+                    {
+                        // ĐÃ VƯỢT QUA: Hiện luôn trạng thái cuối
+                        paths[i].gameObject.SetActive(true);
+                        if (effect != null) 
+                        {
+                            effect.FinishInstant(); 
+                        }
+                    }
+                    else if (pathLevel == currentPlayerLevel)
+                    {
+                        // ĐANG Ở LEVEL NÀY: Vẽ đường nối dẫn tới level tiếp theo
+                        paths[i].gameObject.SetActive(true);
+                        if (effect != null) 
+                        {
+                            effect.StartEffect();
+                        }
+                    }
+                    else
+                    {
+                        // CHƯA TỚI: Ẩn
+                        paths[i].gameObject.SetActive(false);
+                    }
+                }
             }
         }
     }

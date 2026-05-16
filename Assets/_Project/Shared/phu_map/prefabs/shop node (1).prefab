@@ -130,6 +130,7 @@ MonoBehaviour:
   shopData: {fileID: 11400000, guid: cc3423056a3aa5b42811fcb136e975c6, type: 2}
   shopIconImage: {fileID: 3655745544329768423}
   destination: {fileID: 8063902832541808323}
+  checkmark: {fileID: 0}
   panel: {fileID: 3383641885084500768}
   nameText: {fileID: 2768577318902332057}
 --- !u!1 &3383641885084500768

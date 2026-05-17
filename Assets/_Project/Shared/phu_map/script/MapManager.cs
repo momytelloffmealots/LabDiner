@@ -10,7 +10,7 @@ namespace LabDiner.Shared
     {
         [Header("Animation Settings")]
         [SerializeField] private PopScaleEffect _mainPanelEffect; // Hiệu ứng cho toàn bộ Map Panel
-        [SerializeField] private PopScaleEffect backbutton;
+        [SerializeField] private PopScaleEffect img_shop;
         [SerializeField] private RectOffsetEffect globalPathEffect; // Hiệu ứng vẽ toàn bộ bản đồ
 
         [Header("Danh sách Shop trong Map này")]
@@ -37,10 +37,10 @@ namespace LabDiner.Shared
                 globalPathEffect.StartEffect();
             }
 
-            if (backbutton != null)
+            if (img_shop != null)
             {
-                backbutton.gameObject.SetActive(true);
-                backbutton.Show();
+                img_shop.gameObject.SetActive(true);
+                img_shop.Show();
             }
 
             RefreshMap(playerLevel);
@@ -52,7 +52,7 @@ namespace LabDiner.Shared
             {
                 _mainPanelEffect.Hide(() => _mainPanelEffect.gameObject.SetActive(false));
             }
-            if (backbutton != null) backbutton.Hide();
+            if (img_shop != null) img_shop.Hide();
         }
 
         public void RefreshMap(int currentPlayerLevel)
@@ -69,7 +69,7 @@ namespace LabDiner.Shared
                 if (i < paths.Count && paths[i] != null)
                 {
                     var effect = paths[i].GetComponent<RectOffsetEffect>();
-                    int pathLevel = node.shopData.level;
+                    int pathLevel = node.shopData.level+1;
 
                     if (pathLevel < currentPlayerLevel)
                     {

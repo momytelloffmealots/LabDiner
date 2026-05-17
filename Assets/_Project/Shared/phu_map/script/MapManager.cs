@@ -12,13 +12,13 @@ namespace LabDiner.Shared
         [SerializeField] private PopScaleEffect _mainPanelEffect; // Hiệu ứng cho toàn bộ Map Panel
         [SerializeField] private PopScaleEffect img_shop;
         [SerializeField] private RectOffsetEffect globalPathEffect; // Hiệu ứng vẽ toàn bộ bản đồ
-
+        [SerializeField] private MoveEffect OtoMove;
         [Header("Danh sách Shop trong Map này")]
         public List<ShopNodeUI> shopNodes;
 
         [Header("Đường nối (Paths)")]
         [Tooltip("Kéo các đường nối có gắn RectOffsetEffect vào đây")]
-        public List<RectTransform> paths; 
+        public List<RectTransform> paths;
 
         [Header("Player Progress")]
         [SerializeField] private int playerLevel = 1; // Cấp hiện tại của người chơi
@@ -64,27 +64,26 @@ namespace LabDiner.Shared
 
                 node.shopData.isCompleted = node.shopData.level < currentPlayerLevel;
                 node.RefreshUI();
-
                 // Logic xử lý đường nối (Paths)
                 if (i < paths.Count && paths[i] != null)
                 {
                     var effect = paths[i].GetComponent<RectOffsetEffect>();
-                    int pathLevel = node.shopData.level+1;
+                    int pathLevel = node.shopData.level + 1;
 
                     if (pathLevel < currentPlayerLevel)
                     {
                         // ĐÃ VƯỢT QUA: Hiện luôn trạng thái cuối
                         paths[i].gameObject.SetActive(true);
-                        if (effect != null) 
+                        if (effect != null)
                         {
-                            effect.FinishInstant(); 
+                            effect.FinishInstant();
                         }
                     }
                     else if (pathLevel == currentPlayerLevel)
                     {
                         // ĐANG Ở LEVEL NÀY: Vẽ đường nối dẫn tới level tiếp theo
                         paths[i].gameObject.SetActive(true);
-                        if (effect != null) 
+                        if (effect != null)
                         {
                             effect.StartEffect();
                         }
@@ -95,7 +94,12 @@ namespace LabDiner.Shared
                         paths[i].gameObject.SetActive(false);
                     }
                 }
+                if (i == currentPlayerLevel - 2) {
+                    OtoMove.gameObject.SetActive(true);
+                    OtoMove.MoveToTarget();
+                }
             }
         }
     }
 }
+

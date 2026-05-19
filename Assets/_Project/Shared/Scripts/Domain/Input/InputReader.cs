@@ -36,7 +36,7 @@ namespace LabDiner.Shared.Input
             _positionAction = new InputAction("Position", binding: "<Pointer>/position");
 
             _backAction = new InputAction("Back", binding: "<Keyboard>/escape");
-            _backAction.AddBinding("<Pointer>/backbutton");
+            _backAction.AddBinding("<Pointer>/img_shop");
 
             _clickAction.started += OnPointerDownInternal;
             _clickAction.canceled += OnPointerUpInternal;

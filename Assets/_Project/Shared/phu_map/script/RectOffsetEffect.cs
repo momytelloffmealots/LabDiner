@@ -1,17 +1,19 @@
 using UnityEngine;
 using UnityEngine.Events;
-using DG.Tweening; // Thêm DOTween
+using DG.Tweening;
 
 [RequireComponent(typeof(RectTransform))]
 public class RectOffsetEffect : MonoBehaviour
 {
-    public enum OffsetSide
+    public enum AnimationType
     {
-        Left, Right, Top, Bottom, Horizontal, Vertical, All
+        Left, Right, Top, Bottom, Horizontal, Vertical, All,
+        Width,  // Thêm tùy chọn chỉnh Chiều rộng
+        Height  // Thêm tùy chọn chỉnh Chiều cao
     }
 
-    [Header("--- Cấu hình Offset ---")]
-    public OffsetSide targetSide = OffsetSide.Left;
+    [Header("--- Cấu hình Animation ---")]
+    public AnimationType targetType = AnimationType.Left;
     public float fromValue = 0f;
     public float toValue = 300f;
     public float duration = 0.5f;
@@ -35,38 +37,57 @@ public class RectOffsetEffect : MonoBehaviour
 
     public void StartEffect()
     {
-        // Reset về giá trị bắt đầu
-        ApplyOffset(fromValue);
+        ApplyValue(fromValue);
 
-        // Sử dụng DOTween để chạy hiệu ứng (Thay thế Coroutine)
-        DOTween.To(() => fromValue, x => ApplyOffset(x), toValue, duration)
+        DOTween.To(() => fromValue, x => ApplyValue(x), toValue, duration)
             .SetTarget(this)
             .SetEase(easeType)
-            .SetUpdate(true) // Chạy cả khi pause
+            .SetUpdate(true)
             .OnComplete(() => onComplete?.Invoke());
     }
 
-    private void ApplyOffset(float value)
+    // Hàm hiện kết quả ngay lập tức không cần chờ animation
+    public void FinishInstant()
+    {
+        ApplyValue(toValue);
+    }
+
+    private void ApplyValue(float value)
     {
         if (rectTransform == null) rectTransform = GetComponent<RectTransform>();
         
         Vector2 min = rectTransform.offsetMin;
         Vector2 max = rectTransform.offsetMax;
+        Vector2 size = rectTransform.sizeDelta;
 
-        switch (targetSide)
+        switch (targetType)
         {
-            case OffsetSide.Left: min.x = value; break;
-            case OffsetSide.Right: max.x = -value; break;
-            case OffsetSide.Top: max.y = -value; break;
-            case OffsetSide.Bottom: min.y = value; break;
-            case OffsetSide.Horizontal: min.x = value; max.x = -value; break;
-            case OffsetSide.Vertical: min.y = value; max.y = -value; break;
-            case OffsetSide.All:
+            case AnimationType.Left: min.x = value; break;
+            case AnimationType.Right: max.x = -value; break;
+            case AnimationType.Top: max.y = -value; break;
+            case AnimationType.Bottom: min.y = value; break;
+            case AnimationType.Horizontal: min.x = value; max.x = -value; break;
+            case AnimationType.Vertical: min.y = value; max.y = -value; break;
+            case AnimationType.All:
                 min = new Vector2(value, value);
                 max = new Vector2(-value, -value);
                 break;
+            case AnimationType.Width:
+                size.x = value;
+                break;
+            case AnimationType.Height:
+                size.y = value;
+                break;
         }
-        rectTransform.offsetMin = min;
-        rectTransform.offsetMax = max;
+
+        if (targetType == AnimationType.Width || targetType == AnimationType.Height)
+        {
+            rectTransform.sizeDelta = size;
+        }
+        else
+        {
+            rectTransform.offsetMin = min;
+            rectTransform.offsetMax = max;
+        }
     }
 }

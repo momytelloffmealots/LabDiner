@@ -13,7 +13,6 @@ namespace LabDiner.Shared
         [Header("UI References")]
         [SerializeField] private Image shopIconImage;
         [SerializeField] private Image destination;
-        [SerializeField] private GameObject checkmark;
         [SerializeField] private GameObject panel;
         [SerializeField] private TextMeshProUGUI nameText;
 
@@ -33,9 +32,6 @@ namespace LabDiner.Shared
             if (shopIconImage != null) shopIconImage.sprite = shopData.icon;
             if (nameText != null) nameText.text = shopData.shopName;
             if (destination != null) destination.sprite = shopData.destination;
-
-            if (checkmark != null)
-                checkmark.SetActive(shopData.isCompleted);
 
             if (shopIconImage != null) 
                 shopIconImage.color = shopData.isCompleted ? Color.white : Color.gray;

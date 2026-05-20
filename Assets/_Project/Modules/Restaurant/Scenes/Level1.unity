@@ -303,6 +303,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -395,6 +396,7 @@ MonoBehaviour:
   m_AffectedAgents: ffffffff
 --- !u!212 &31896687
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -413,6 +415,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -434,9 +438,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 90
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -446,7 +452,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &41009519
 GameObject:
@@ -798,17 +803,25 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80553607}
-  m_LocalRotation: {x: 0, y: 0, z: -0.13917309, w: 0.9902681}
+  m_LocalRotation: {x: -0, y: -0, z: 0.64337415, w: 0.7655519}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 826858649}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: -400, y: 50}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 80.088}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -59, y: -330}
+  m_SizeDelta: {x: 50, y: 100}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &80553609
 MonoBehaviour:
@@ -859,11 +872,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  targetType: 1
-  fromValue: 600
-  toValue: 200
-  duration: 2
+  m_EditorClassIdentifier: LabDiner.Shared::RectOffsetEffect
+  targetSide: 0
+  fromValue: 0
+  toValue: 300
+  duration: 0.5
   easeType: 7
   playOnStart: 0
   onComplete:
@@ -1040,6 +1053,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1529,17 +1543,25 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147930138}
-  m_LocalRotation: {x: 0, y: 0, z: -0.13917309, w: 0.9902681}
+  m_LocalRotation: {x: -0, y: -0, z: 0.48524275, w: 0.8743795}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 826858649}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: -400, y: 50}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 58.057}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -16, y: 190}
+  m_SizeDelta: {x: 50, y: 100}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147930140
 MonoBehaviour:
@@ -1590,11 +1612,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  targetType: 1
-  fromValue: 600
-  toValue: 200
-  duration: 2
+  m_EditorClassIdentifier: LabDiner.Shared::RectOffsetEffect
+  targetSide: 0
+  fromValue: 0
+  toValue: 300
+  duration: 0.5
   easeType: 7
   playOnStart: 0
   onComplete:
@@ -1876,6 +1898,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &254137498
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1894,6 +1917,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1915,9 +1940,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 105
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -5133144130421508969, guid: 7f3c136d57e5aa74cb480bce9c712930, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1927,7 +1954,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &260510618
 GameObject:
@@ -1994,8 +2020,8 @@ RectTransform:
   - {fileID: 994239704}
   m_Father: {fileID: 1329535031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.03671706}
-  m_AnchorMax: {x: 1, y: 0.9492441}
+  m_AnchorMin: {x: 0, y: 0.04028436}
+  m_AnchorMax: {x: 1, y: 0.9443128}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2090,11 +2116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -300
+      value: -375
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2307,8 +2333,8 @@ RectTransform:
   - {fileID: 1753476720}
   m_Father: {fileID: 1702351616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.03671706}
-  m_AnchorMax: {x: 1, y: 0.9492441}
+  m_AnchorMin: {x: 0, y: 0.04028436}
+  m_AnchorMax: {x: 1, y: 0.9443128}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3370,6 +3396,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -3641,17 +3668,25 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613610025}
-  m_LocalRotation: {x: 0, y: 0, z: -0.13917309, w: 0.9902681}
+  m_LocalRotation: {x: -0, y: -0, z: 0.66501135, w: 0.74683326}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 826858649}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -600}
   m_SizeDelta: {x: -400, y: 50}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 83.366}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -16, y: -743}
+  m_SizeDelta: {x: 50, y: 100}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &613610027
 MonoBehaviour:
@@ -3702,11 +3737,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  targetType: 1
-  fromValue: 600
-  toValue: 200
-  duration: 2
+  m_EditorClassIdentifier: LabDiner.Shared::RectOffsetEffect
+  targetSide: 0
+  fromValue: 0
+  toValue: 300
+  duration: 0.5
   easeType: 7
   playOnStart: 0
   onComplete:
@@ -3844,6 +3879,7 @@ MonoBehaviour:
   m_AffectedAgents: ffffffff
 --- !u!212 &635279382
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3862,6 +3898,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3883,9 +3921,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3895,7 +3935,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &641554926
 GameObject:
@@ -4065,6 +4104,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &660232766
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4083,6 +4123,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4104,9 +4146,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 101
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -5133144130421508969, guid: 7f3c136d57e5aa74cb480bce9c712930, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4116,7 +4160,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &665590055 stripped
 MonoBehaviour:
@@ -4229,6 +4272,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -4398,6 +4442,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -4848,7 +4893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002696628c16c6a4aaaee4fdf931c9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _duration: 1
+  _duration: 0.3
   _targetScale: {x: 1, y: 1, z: 1}
   _showEase: 27
   _hideEase: 26
@@ -5228,6 +5273,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -5295,17 +5341,25 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925918813}
-  m_LocalRotation: {x: 0, y: 0, z: 0.13917309, w: 0.9902681}
+  m_LocalRotation: {x: -0, y: -0, z: -0.51468354, w: 0.8573803}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 826858649}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -800}
   m_SizeDelta: {x: -400, y: 50}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -61.953}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -26, y: -808}
+  m_SizeDelta: {x: 50, y: 100}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925918815
 MonoBehaviour:
@@ -5356,11 +5410,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  targetType: 1
-  fromValue: 600
-  toValue: 200
-  duration: 2
+  m_EditorClassIdentifier: LabDiner.Shared::RectOffsetEffect
+  targetSide: 0
+  fromValue: 0
+  toValue: 300
+  duration: 0.5
   easeType: 7
   playOnStart: 0
   onComplete:
@@ -5521,6 +5575,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &969066691
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5539,6 +5594,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5560,9 +5617,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 101
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -5133144130421508969, guid: 7f3c136d57e5aa74cb480bce9c712930, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5572,7 +5631,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &986200696
 GameObject:
@@ -5773,17 +5831,25 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004634869}
-  m_LocalRotation: {x: 0, y: 0, z: 0.13917309, w: 0.9902681}
+  m_LocalRotation: {x: -0, y: -0, z: -0.5517717, w: 0.8339952}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 826858649}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -400, y: 50}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -66.977}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -56, y: -108}
+  m_SizeDelta: {x: 50, y: 100}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004634871
 MonoBehaviour:
@@ -5834,11 +5900,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  targetType: 1
-  fromValue: 600
-  toValue: 200
-  duration: 2
+  m_EditorClassIdentifier: LabDiner.Shared::RectOffsetEffect
+  targetSide: 0
+  fromValue: 0
+  toValue: 300
+  duration: 0.5
   easeType: 7
   playOnStart: 0
   onComplete:
@@ -6087,11 +6153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 224.99994
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6221,6 +6287,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -6340,11 +6407,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: -303
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 324
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6427,9 +6494,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3418874fe2ced346a2b222e43354942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   _mainPanelEffect: {fileID: 1868875863}
   img_shop: {fileID: 814647640}
   globalPathEffect: {fileID: 1967664976}
+=======
+  _mainPanelEffect: {fileID: 814647640}
+  backbutton: {fileID: 2109260735}
+  pathEffect: {fileID: 1967664976}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   shopNodes:
   - {fileID: 1074348409}
   - {fileID: 224369229}
@@ -6439,6 +6512,7 @@ MonoBehaviour:
   - {fileID: 1122961077}
   - {fileID: 708115039}
   paths:
+<<<<<<< HEAD
   - {fileID: 925918814}
   - {fileID: 613610026}
   - {fileID: 1774116023}
@@ -6446,6 +6520,16 @@ MonoBehaviour:
   - {fileID: 1004634870}
   - {fileID: 147930139}
   playerLevel: 2
+=======
+  - {fileID: 925918815}
+  - {fileID: 613610027}
+  - {fileID: 1774116024}
+  - {fileID: 80553609}
+  - {fileID: 1004634871}
+  - {fileID: 147930140}
+  header_map: {fileID: 1967664974}
+  playerLevel: 7
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
 --- !u!1 &1134139539
 GameObject:
   m_ObjectHideFlags: 0
@@ -6650,6 +6734,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -6769,11 +6854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 300
+      value: 227
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -700
+      value: -741
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6911,7 +6996,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -6919,6 +7003,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!81 &1198059464
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7138,6 +7223,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -7428,11 +7514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: -308
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -500
+      value: -664
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7492,6 +7578,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1279400109
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7510,6 +7597,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7531,9 +7620,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -3736858037222229215, guid: 64fb652190ccebb44921188d90854c56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7543,7 +7634,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1291107854
 GameObject:
@@ -7596,6 +7686,7 @@ MonoBehaviour:
   m_AffectedAgents: ffffffff
 --- !u!212 &1291107857
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7614,6 +7705,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7635,9 +7728,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_FlipX: 0
@@ -7647,7 +7742,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1294299174 stripped
 RectTransform:
@@ -8029,11 +8123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: -366
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: -243
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8147,6 +8241,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -8239,6 +8334,7 @@ NavMeshObstacle:
   m_TimeToStationary: 0.5
 --- !u!212 &1414250898
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8257,6 +8353,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8278,9 +8376,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_FlipX: 0
@@ -8290,7 +8390,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1420029688
 PrefabInstance:
@@ -8411,6 +8510,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1437155253
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8429,6 +8529,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8450,9 +8552,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -4186393150657588830, guid: 3624900e9e2be154498d5ec9abeee3cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8462,7 +8566,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1460412242
 GameObject:
@@ -8661,6 +8764,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -8846,6 +8950,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -9011,6 +9116,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1552269446
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9029,6 +9135,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9050,9 +9158,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 101
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 8759979621730182840, guid: 7d324c39d53887e4a8ece0c152253988, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9062,7 +9172,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1552296107
 GameObject:
@@ -10513,6 +10622,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -11026,17 +11136,25 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774116022}
-  m_LocalRotation: {x: 0, y: 0, z: 0.13917309, w: 0.9902681}
+  m_LocalRotation: {x: -0, y: -0, z: -0.51963496, w: 0.8543884}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 826858649}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -400}
   m_SizeDelta: {x: -400, y: 50}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -62.616}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -33, y: -520}
+  m_SizeDelta: {x: 50, y: 100}
+>>>>>>> parent of dab5332 (Merge branch 'phu' of https://github.com/momytelloffmealots/LabDiner into phu)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774116024
 MonoBehaviour:
@@ -11087,11 +11205,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  targetType: 1
-  fromValue: 600
-  toValue: 200
-  duration: 2
+  m_EditorClassIdentifier: LabDiner.Shared::RectOffsetEffect
+  targetSide: 0
+  fromValue: 0
+  toValue: 300
+  duration: 0.5
   easeType: 7
   playOnStart: 0
   onComplete:
@@ -11234,8 +11352,8 @@ RectTransform:
   - {fileID: 1593631979}
   m_Father: {fileID: 1606589515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.03671706}
-  m_AnchorMax: {x: 1, y: 0.9492441}
+  m_AnchorMin: {x: 0, y: 0.04028436}
+  m_AnchorMax: {x: 1, y: 0.9443128}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11286,6 +11404,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1825593358
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11304,6 +11423,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11325,9 +11446,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -6396006526736858993, guid: 0dafa657afffa95429f91dfd15317afe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11337,7 +11460,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1827125619
 GameObject:
@@ -11383,7 +11505,6 @@ GameObject:
   - component: {fileID: 1868875862}
   - component: {fileID: 1868875861}
   - component: {fileID: 1868875860}
-  - component: {fileID: 1868875863}
   m_Layer: 0
   m_Name: map
   m_TagString: Untagged
@@ -11480,22 +11601,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868875858}
   m_CullTransparentMesh: 1
---- !u!114 &1868875863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868875858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002696628c16c6a4aaaee4fdf931c9ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _duration: 0.3
-  _targetScale: {x: 1, y: 1, z: 1}
-  _showEase: 27
-  _hideEase: 26
 --- !u!1 &1906945029
 GameObject:
   m_ObjectHideFlags: 0
@@ -11579,6 +11684,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1955176588
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11597,6 +11703,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11618,9 +11726,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -2247456255284083197, guid: caf5a5a2e4043614aae253473c0e06b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11630,7 +11740,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1967664972
 GameObject:
@@ -11722,7 +11831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1654bfffd3748cd4eb0fcb9c7626c753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetType: 1
+  targetSide: 1
   fromValue: 600
   toValue: 0
   duration: 2
@@ -12190,18 +12299,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1125412684}
-        m_TargetAssemblyTypeName: LabDiner.Shared.MapManager, LabDiner.Shared
-        m_MethodName: CloseMap
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2109260733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12307,6 +12404,7 @@ MonoBehaviour:
   m_AffectedAgents: ffffffff
 --- !u!212 &2130589143
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12325,6 +12423,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12346,9 +12446,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 90
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12358,7 +12460,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2133816451 stripped
 MonoBehaviour:
@@ -12859,11 +12960,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -300
+      value: -297
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -900
+      value: -887
       objectReference: {fileID: 0}
     - target: {fileID: 3023180062277703927, guid: 68a5cfee67ebce14394410a75a0d389d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
